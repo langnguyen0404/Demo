@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập và Đăng ký</title>
+    <style>
+        .body1 {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container1 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        .h21 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label1 {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input1 {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button1 {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            background-color: #218838;
+        }
+
+        .toggle-link1 {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .toggle-link1 a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .toggle-link1 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="body1">
+
+    <div class="container1" id="form-container">
+        <div id="login-form">
+            <h2 class="h21">Đăng nhập</h2>
+            <form class="form1">
+                <label class="label1" for="login-email">Email:</label>
+                <input class="input1" type="email" id="login-email" name="email" required>
+                <label class="label1" for="login-password">Mật khẩu:</label>
+                <input class="input1" type="password" id="login-password" name="password" required>
+                <button class="button1" type="submit">Đăng nhập</button>
+            </form>
+            <div class="toggle-link1">
+                <p>Chưa có tài khoản? <a href="#" onclick="toggleForms()">Đăng ký</a></p>
+            </div>
+        </div>
+
+        <div id="register-form" style="display: none;">
+            <h2 class="h21">Đăng ký</h2>
+            <form class="form1">
+                <label class="label1" for="register-name">Tên:</label>
+                <input class="input1" type="text" id="register-name" name="name" required>
+                <label class="label1" for="register-email">Email:</label>
+                <input class="input1" type="email" id="register-email" name="email" required>
+                <label class="label1" for="register-password">Mật khẩu:</label>
+                <input class="input1" type="password" id="register-password" name="password" required>
+                <button class="button1" type="submit">Đăng ký</button>
+            </form>
+            <div class="toggle-link1">
+                <p>Đã có tài khoản? <a href="#" onclick="toggleForms()">Đăng nhập</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById('login-form');
+            var registerForm = document.getElementById('register-form');
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                registerForm.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                registerForm.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

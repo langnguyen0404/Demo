@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Đơn Hàng</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+        /* Quản Lý Đơn Hàng */
+        .body2 {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #343a40;
+        }
+
+        .header2 {
+            background-color: #316b7d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container2 {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .table2 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .th2,
+        .td2 {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        .th2 {
+            background-color: #316b7d;
+            color: white;
+        }
+
+        .tbody2 tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .a2 {
+            color: #316b7d;
+            text-decoration: none;
+        }
+
+        .a2:hover {
+            text-decoration: underline;
+        }
+
+        .footer2 {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body class="body2">
+    <header class="header2">
+        <h1>Quản Lý Đơn Hàng</h1>
+    </header>
+    <div class="container2">
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th class="th2">Mã Đơn Hàng</th>
+                    <th class="th2">Người Đặt Hàng</th>
+                    <th class="th2">Số Điện Thoại</th>
+                    <th class="th2">Địa Chỉ</th>
+                    <th class="th2">Tổng Đơn Hàng</th>
+                    <th class="th2">Phương Thức Thanh Toán</th>
+                    <th class="th2">Trạng Thái</th>
+                </tr>
+            </thead>
+            <tbody id="donhang" class="tbody2">
+                <!-- Dữ liệu đơn hàng sẽ được điền vào đây -->
+                <tr>
+                    <td class="td2">DH123</td>
+                    <td class="td2">Người A</td>
+                    <td class="td2">0123456789</td>
+                    <td class="td2">123 Đường ABC, Quận XYZ</td>
+                    <td class="td2">$100.00</td>
+                    <td class="td2">Thanh toán khi nhận hàng</td>
+                    <td class="td2">Đang Giao Hàng</td>
+                </tr>
+                <tr>
+                    <td class="td2">DH124</td>
+                    <td class="td2">Người B</td>
+                    <td class="td2">0123456789</td>
+                    <td class="td2">456 Đường DEF, Quận UVW</td>
+                    <td class="td2">$75.50</td>
+                    <td class="td2">Chuyển khoản ngân hàng</td>
+                    <td class="td2">Hoàn Thành</td>
+                </tr>
+                <!-- Thêm dòng tương ứng với mỗi đơn hàng -->
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer2">&copy; 2023 Tên Công Ty</footer>
+</body>
+
+</html>
